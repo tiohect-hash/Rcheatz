@@ -1,0 +1,292 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RCheatz Hub • v0.6</title>
+  <style>
+  
+  
+  
+  
+    :root {
+      --bg:#0a0a12;
+      --card:#1a1a2e;
+      --cardHover:#22223a;
+      --txt:#fff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--txt);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .cheat-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: var(--txt);
+      background: var(--card);
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,.6);
+      transition: all .3s ease-in-out;
+    }
+
+    .status {
+      font-size: 12px;
+      margin-top: 6px;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* Badge Colors */
+    .outdated { background:#9a031e; } /* red */
+    .updated  { background:linear-gradient(90deg,#16a34a,#4ade80); color:#fff; text-shadow:0 0 5px #22c55e; }
+    .scam     { background:#d00000; }
+    .web      { background:#3a86ff; }
+
+    /* Hover glows matching type */
+    .cheat-btn.outdated:hover { box-shadow:0 0 20px #9a031e; }
+    .cheat-btn.updated:hover  { box-shadow:0 0 20px #22c55e; }
+    .cheat-btn.scam:hover     { box-shadow:0 0 20px #d00000; }
+    .cheat-btn.web:hover      { box-shadow:0 0 20px #3a86ff; }
+
+    .recommended {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #ffd60a;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .recommended::before { content:"⭐"; }
+  </style>
+  
+</head>
+
+<body>
+<a href="versions.html">📌 Versions</a> |
+ <a href="edits.html">📌 Edits</a> |
+    <a href="disclaimer.html">⚠️ Disclaimer</a> |
+    <a href="/index.html">Which one?</a>
+ <a> <h1>RCheatz</h1>
+  <div class="grid" id="cheatGrid"></div>
+  
+  
+  <footer style="
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background: rgba(10,10,18,0.85); 
+    text-align: center; 
+    font-size: 14px; 
+    color: #ccc; 
+    padding: 10px; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    text-shadow: 0 0 6px rgba(255,255,255,0.4); 
+    backdrop-filter: blur(6px);
+">
+    ⚠️ Some info may be outdated due to Roblox updates.<br>
+    Executors & cheats often go down after patches.<br>
+    <span style="color:#888; font-size:12px;">This site is a solo project — updates aren’t guaranteed.</span>
+</footer>
+
+
+  <script>
+    const cheats = [
+      { name:"Velocity", status:"Updated",       type:"updated",  recommended:true,  link:"https://rip.linkvertise.lol/stuff/velocity" },
+      { name:"Pulsar",   status:"No download",   type:"outdated", recommended:true,  link:"https://discord.gg/rdEHJBRfSx" },
+      { name:"Arctic",   status:"Updated",       type:"updated", recommended:true,  link:"https://discord.gg/arctic-studios-1329873465897128058" },
+      { name:"Bunni",    status:"Outdated info", type:"outdated", recommended:false, link:"https://rcheatz.neocities.org" },
+      { name:"Swift",    status:"Outdated info", type:"outdated", recommended:false, link:"#"},
+      { name:"Bypasser", status:"Web",           type:"web",      recommended:false, link:"#"},
+      { name:"lx63",     status:"Outdated info", type:"outdated", recommended:false, link:"https://lx63.xyz"},
+      { name:"valex",    status:"Outdated info", type:"outdated", recommended:false, link:"#"},
+      { name:"Moon",     status:"Outdated info", type:"outdated", recommended:false, link:"#"},
+      { name:"Solara",   status:"Outdated info", type:"outdated", recommended:false, link:"#"},
+      { name:"AWP",      status:"Scam",          type:"scam",     recommended:false, link:"#"},
+      { name:"VOLCANO",  status:"Outdated info", type:"outdated", recommended:false, link:"#"}
+    ];
+    
+
+    const grid = document.getElementById("cheatGrid");
+    cheats.forEach(c => {
+      const a = document.createElement("a");
+      a.href = c.link || "#";
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.className = `cheat-btn ${c.type}`;
+      a.innerHTML = `
+        <div>${c.name}</div>
+        <div class="status ${c.type}">${c.status}</div>
+        ${c.recommended ? `<div class="recommended">Recommended</div>` : ""}
+      `;
+      grid.appendChild(a);
+    });
+
+  </script>
+
+  
+
+
+    
+    <style>
+      body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4b0082, #1e90ff);
+    background-attachment: fixed; /* keeps gradient in place */
+    background-repeat: no-repeat;
+    background-size: cover; /* ensures smooth scaling */
+    font-family: Arial, sans-serif;
+}
+.portal-btn {
+    background: #1a1a1a; /* dark background */
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(106, 13, 173, 0.5), 
+                0 0 30px rgba(30, 144, 255, 0.3); /* purple + blue glow */
+    text-shadow: 0 0 6px rgba(106, 13, 173, 0.8), 
+                 0 0 12px rgba(30, 144, 255, 0.6); /* glowing text */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, text-shadow 0.2s ease;
+}
+
+.portal-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(106, 13, 173, 0.7),
+                0 0 40px rgba(30, 144, 255, 0.5);
+    text-shadow: 0 0 8px rgba(106, 13, 173, 1),
+                 0 0 16px rgba(30, 144, 255, 0.9);
+}
+
+/* Header glow */
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(106, 13, 173, 1), 
+                 0 0 16px rgba(30, 144, 255, 0.8);
+}
+.portal-btn {
+    background: #1a1a1a; /* dark background */
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(106, 13, 173, 0.5), 
+                0 0 30px rgba(30, 144, 255, 0.3); /* purple + blue glow */
+    text-shadow: 0 0 6px rgba(106, 13, 173, 0.8), 
+                 0 0 12px rgba(30, 144, 255, 0.6); /* glowing text */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, text-shadow 0.2s ease;
+}
+
+.portal-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(106, 13, 173, 0.7),
+                0 0 40px rgba(30, 144, 255, 0.5);
+    text-shadow: 0 0 8px rgba(106, 13, 173, 1),
+                 0 0 16px rgba(30, 144, 255, 0.9);
+}
+
+/* Header glow */
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(106, 13, 173, 1), 
+                 0 0 16px rgba(30, 144, 255, 0.8);
+}
+.info-section {
+  display: flex;
+  justify-content: center; /* keeps everything centered */
+  align-items: flex-start;
+  gap: 40px; /* space between cards */
+  margin-top: 40px;
+}
+
+.card {
+  width: 350px;   /* fixed width so both look aligned */
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.info-section {
+  display: flex;
+  justify-content: center; /* keeps everything centered */
+  align-items: flex-start;
+  gap: 40px; /* space between cards */
+  margin-top: 40px;
+}
+
+.card {
+  width: 350px;   /* fixed width so both look aligned */
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.8), 
+                0 0 50px rgba(0, 0, 255, 0.5);
+}
+ 
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+  </body>
+</html>
