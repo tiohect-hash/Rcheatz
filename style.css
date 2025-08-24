@@ -157,4 +157,52 @@ footer {
   color: #ffd60a;
   font-weight: bold;
 }
+.executors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.executor-card {
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.executor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Status colors */
+.executor-green {
+  background: linear-gradient(135deg, #00b04b, #1f9c5d);
+}
+.executor-red {
+  background: linear-gradient(135deg, #d70000, #a10000);
+}
+.executor-blue {
+  background: linear-gradient(135deg, #0078ff, #0044cc);
+}
+.executor-darkred {
+  background: linear-gradient(135deg, #660000, #400000);
+}
+
+/* Badge style */
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+}
+
+
 
