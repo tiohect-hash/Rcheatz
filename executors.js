@@ -20,13 +20,14 @@ executors.forEach(exec => {
   card.classList.add("executor-card", `executor-${exec.type}`);
 
   card.innerHTML = `
-    <a href="${exec.url}">
+    <a href="${exec.url} target="_blank">
       <h3>${exec.name}</h3>
       <p>${exec.status}</p>
       ${exec.note ? `<span class="badge">⭐ ${exec.note}</span>` : ""}
     </a>
   `;
-
+rel="noopener noreferrer"
   grid.appendChild(card);
 });
+
 
