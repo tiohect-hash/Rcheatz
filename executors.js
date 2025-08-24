@@ -1,16 +1,16 @@
 const executors = [
-  { name: "Velocity", status: "Updated", note: "Recommended", type: "green", url: "https://rcheatzhub.com/velocity" },
-  { name: "Pulsar", status: "No download", note: "Recommended", type: "darkred", url: "https://rcheatzhub.com/pulsar" },
-  { name: "Arctic", status: "Updated", note: "Recommended", type: "green", url: "https://rcheatzhub.com/arctic" },
-  { name: "Bunni", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/bunni" },
+  { name: "Velocity", status: "Updated", note: "Recommended", type: "green", url: "https://rip.linkvertise.lol/stuff/velocity" },
+  { name: "Pulsar", status: "No download", note: "Recommended", type: "darkred", url: "https://discord.com/invite/rdEHJBRfSx" },
+  { name: "Arctic", status: "Updated", note: "Recommended", type: "green", url: "https://discord.com/invite/arctic-studios-1329873465897128058" },
+  { name: "Bunni", status: "Outdated info", note: "", type: "darkred", url: "https://gitlab.com/senz3/bunni-download/-/raw/main/latestbunni.zip?ref_type=heads&inline=false" },
   { name: "AWP", status: "Scam", note: "", type: "red", url: "https://rcheatzhub.com/awp" },
-  { name: "Swift", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/swift" },
-  { name: "Bypasser", status: "Web", note: "", type: "blue", url: "https://rcheatzhub.com/bypasser" },
-  { name: "Ix63", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/ix63" },
-  { name: "Valex", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/valex" },
-  { name: "Moon", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/moon" },
-  { name: "Solara", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/solara" },
-  { name: "VOLCANO", status: "Outdated info", note: "", type: "darkred", url: "https://rcheatzhub.com/volcano" },
+  { name: "Swift", status: "Outdated info", note: "", type: "darkred", url: "https://getswift.vip" },
+  { name: "Bypasser", status: "Web", note: "", type: "blue", url: "rip.linkvertise.lol/" },
+  { name: "lx63", status: "Outdated info", note: "", type: "darkred", url: "lx63.xyz/" },
+  { name: "Valex", status: "Outdated info", note: "", type: "darkred", url: "valex.io" },
+  { name: "Moon", status: "Outdated info", note: "", type: "darkred", url: "https://getmoonexecuter.vercel.app" },
+  { name: "Solara", status: "Outdated info", note: "", type: "darkred", url: "https://volcano.wtf" },
+  { name: "VOLCANO", status: "Outdated info", note: "", type: "darkred", url: "https://volcano.wtf" },
 ];
 
 const grid = document.getElementById("executors-grid");
@@ -29,3 +29,4 @@ executors.forEach(exec => {
 
   grid.appendChild(card);
 });
+
