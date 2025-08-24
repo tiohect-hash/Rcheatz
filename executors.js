@@ -19,11 +19,21 @@ executors.forEach(exec => {
   const card = document.createElement("div");
   card.classList.add("executor-card", `executor-${exec.type}`);
 
+ executors.forEach(exec => {
+  const card = document.createElement("div");
+  card.classList.add("executor-card", `executor-${exec.type}`);
+
   card.innerHTML = `
-    <h3>${exec.name}</h3>
-    <p>${exec.status}</p>
-    ${exec.note ? `<span class="badge">⭐ ${exec.note}</span>` : ""}
+    <a href="${exec.url}">
+      <h3>${exec.name}</h3>
+      <p>${exec.status}</p>
+      ${exec.note ? `<span class="badge">⭐ ${exec.note}</span>` : ""}
+    </a>
   `;
 
   grid.appendChild(card);
 });
+
+  grid.appendChild(card);
+});
+
