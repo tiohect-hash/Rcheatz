@@ -1,4 +1,4 @@
-cconst executors = [
+const executors = [
   { name: "Velocity", link: "#", status: "updated", labels: ["Updated", "Recommended"] },
   { name: "Pulsar", link: "#", status: "outdated", labels: ["Outdated Info", "Recommended"] },
   { name: "Arctic", link: "#", status: "outdated", labels: ["Outdated Info", "Recommended"] },
@@ -27,4 +27,5 @@ executors.forEach(exec => {
   `;
   grid.appendChild(card);
 });
+
 
