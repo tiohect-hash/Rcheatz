@@ -3,7 +3,7 @@
 const executors = [
   { name: "Velocity", status: "Updated", note: "Recommended", color: "green" },
   { name: "Pulsar", status: "No download", note: "Recommended", color: "maroon" },
-  { name: "Arctic", status: "Updated", note: "", color: "green" },
+  { name: "Arctic", status: "Updated", note: "Recommende", color: "green" },
   { name: "Bunni", status: "Outdated info", note: "", color: "maroon" },
   { name: "AWP", status: "Scam", note: "", color: "red" },
   { name: "Swift", status: "Outdated info", note: "", color: "maroon" },
@@ -30,4 +30,5 @@ executors.forEach(executor => {
 
   grid.appendChild(card);
 });
+
 
