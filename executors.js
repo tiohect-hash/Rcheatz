@@ -1,31 +1,32 @@
+// executors.js
+
 const executors = [
-  { name: "Velocity", link: "#", status: "updated", labels: ["Updated", "Recommended"] },
-  { name: "Pulsar", link: "#", status: "outdated", labels: ["Outdated Info", "Recommended"] },
-  { name: "Arctic", link: "#", status: "outdated", labels: ["Outdated Info", "Recommended"] },
-  { name: "Bunni", link: "https://gitlab.com/senz3/bunni-download/-/raw/main/latestbunni.zip?ref_type=heads&inline=false", status: "outdated", labels: ["Outdated Info"] },
-  { name: "Swift", link: "#", status: "outdated", labels: ["Outdated Info"] },
-  { name: "Bypasser", link: "#", status: "web", labels: ["Web"] },
-  { name: "Ix63", link: "#", status: "outdated", labels: ["Outdated Info"] },
-  { name: "Valex", link: "#", status: "outdated", labels: ["Outdated Info"] },
-  { name: "Moon", link: "#", status: "outdated", labels: ["Outdated Info"] },
-  { name: "Solara", link: "#", status: "outdated", labels: ["Outdated Info"] },
-  { name: "AWP", link: "#", status: "scam", labels: ["Scam"] },
-  { name: "VOLCANO", link: "#", status: "outdated", labels: ["Outdated Info"] }
+  { name: "Velocity", status: "Updated", note: "Recommended", color: "green" },
+  { name: "Pulsar", status: "No download", note: "Recommended", color: "maroon" },
+  { name: "Arctic", status: "Updated", note: "Recommended", color: "green" },
+  { name: "Bunni", status: "Outdated info", note: "", color: "maroon" },
+  { name: "AWP", status: "Scam", note: "", color: "red" },
+  { name: "Swift", status: "Outdated info", note: "", color: "maroon" },
+  { name: "Bypasser", status: "Web", note: "", color: "navy" },
+  { name: "Ix63", status: "Outdated info", note: "", color: "maroon" },
+  { name: "Valex", status: "Outdated info", note: "", color: "maroon" },
+  { name: "Moon", status: "Outdated info", note: "", color: "maroon" },
+  { name: "Solara", status: "Outdated info", note: "", color: "maroon" },
+  { name: "VOLCANO", status: "Outdated info", note: "", color: "maroon" }
 ];
 
 const grid = document.getElementById("executorsGrid");
 
-executors.forEach(exec => {
-  const card = document.createElement("a");
-  card.className = `card ${exec.status}`;
-  card.href = exec.link;
-  card.target = "_blank";
+executors.forEach(executor => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.style.background = executor.color;
+
   card.innerHTML = `
-    <h2>${exec.name}</h2>
-    ${exec.labels.map(l => `<span class="status ${exec.status}">${l}</span>`).join(" ")}
-    ${exec.labels.includes("Recommended") ? `<div class="recommended">⭐ Recommended</div>` : ""}
+    <h2>${executor.name}</h2>
+    <p>${executor.status}</p>
+    ${executor.note ? `<span class="badge">${executor.note}</span>` : ""}
   `;
+
   grid.appendChild(card);
 });
-
-
